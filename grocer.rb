@@ -55,5 +55,4 @@ def checkout(cart, coupons)
     total += v[:price] * v[:count]
   end
   total > 100 ? (0.9 * total) : total
-  
 end
