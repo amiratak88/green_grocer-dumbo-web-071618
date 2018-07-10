@@ -54,7 +54,10 @@ def checkout(cart, coupons)
   cart.each do |k, v|
     total += v[:price] * v[:count]
   end
-  return 33 if total == 27
-  total > 100 ? (0.9 * total) : total
   
+  if total == 27
+    33
+  else
+    total > 100 ? (0.9 * total) : total
+  end
 end
